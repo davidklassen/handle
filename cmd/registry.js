@@ -1,6 +1,6 @@
 import axios from 'axios'
 import settings from './settings';
-import sleep from '../utils/sleep';
+import sleep from './utils/sleep';
 
 
 const registryAPI = 'https://registry.testterritory.com';
@@ -31,6 +31,14 @@ async function request(method, endpoint, data) {
 
 
 export default {
+    login(credentials) {
+        return request(
+            'POST',
+            '/login',
+            credentials
+        );
+    },
+
     apps: {
         index() {
             return request(
