@@ -18,7 +18,7 @@ At this moment registration is not open yet. Drop an email to [f0rk.tt@gmail.com
 ### Install
 
 ```bash
-$ npm install -g handle
+$ npm install -g node-handle
 $ handle login
 email: <your email>
 password: <your password>
