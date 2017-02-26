@@ -70,10 +70,10 @@ export default async (service) => {
             },
             plugins,
             resolve: {
-                modules: ["node_modules", __dirname + '/../../node_modules']
+                modules: ["node_modules", __dirname + '/../node_modules']
             },
             resolveLoader: {
-                modules: ["web_loaders", "web_modules", "node_loaders", "node_modules", __dirname + '/../../node_modules']
+                modules: ["web_loaders", "web_modules", "node_loaders", "node_modules", __dirname + '/../node_modules']
             }
         });
 
