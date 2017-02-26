@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+
+import program from 'commander';
+import deploy from './deploy';
+
+
+program
+    .command('login')
+    .description('verifies user credentials in registry and saves the access token in configuration file')
+    .action(() => console.log('Logging in'));
+
+
+program
+    .command('deploy')
+    .description('deploys your application')
+    .action(deploy);
+
+
+program.parse(process.argv);
+
+
+if (program.args.length === 0) {
+    program.help();
+}
