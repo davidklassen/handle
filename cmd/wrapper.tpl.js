@@ -1,6 +1,9 @@
 import * as service from '<%= path %>';
 import config from './handle.json';
 
+global.APP_CONFIG = config;
+global.ACCOUNT_ID = '<%= accountId %>';
+
 exports['default'] = async (e, ctx, fn) => {
     try {
         // FIXME: should handle not only http events.

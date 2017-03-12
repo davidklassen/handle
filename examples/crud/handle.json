@@ -1,0 +1,41 @@
+{
+  "name": "crud",
+  "services": [
+    {
+      "name": "books",
+      "src": "./index.js"
+    }
+  ],
+  "http": {
+    "routes": [
+      {
+        "path": "/books",
+        "method": "GET",
+        "action": "books.index"
+      },
+      {
+        "path": "/books/{id}",
+        "method": "GET",
+        "action": "books.show"
+      },
+      {
+        "path": "/books",
+        "method": "POST",
+        "action": "books.create"
+      },
+      {
+        "path": "/books/{id}",
+        "method": "DELETE",
+        "action": "books.del"
+      }
+    ]
+  },
+  "db": {
+    "collections": [
+      {
+        "name": "books",
+        "primaryKey": "id"
+      }
+    ]
+  }
+}

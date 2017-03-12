@@ -11,6 +11,7 @@ import asyncFuncs from 'babel-plugin-syntax-async-functions';
 import asyncToGenerator from 'babel-plugin-transform-async-to-generator';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import {walk} from "./utils/walk";
+import settings from './settings';
 // FIXME: see https://github.com/webpack/loader-utils/issues/56 should be removed after babel-loader fixes this issue
 process.noDeprecation = true;
 
@@ -19,7 +20,7 @@ const wrapper = path.join(__dirname, 'wrapper.tpl.js');
 
 
 export default async (service) => {
-    return new Promise((resolve, reject) => ejs.renderFile(wrapper, { path: service.src }, (err, str) => {
+    return new Promise((resolve, reject) => ejs.renderFile(wrapper, { path: service.src, accountId: settings.accountId }, (err, str) => {
         if (err) {
             return reject(err);
         }
@@ -27,10 +28,6 @@ export default async (service) => {
         const entry = `./_wrapper.${service.name}.js`;
 
         const plugins = [];
-
-        plugins.push(new webpack.DefinePlugin({
-            APP_CONFIG: fs.readFileSync('./handle.json', 'utf8')
-        }));
 
         if (service.include) {
             plugins.push(new CopyWebpackPlugin(service.include));

@@ -1,0 +1,14 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Klassen <f0rk.tt@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^3.0.1"
+  }
+}
