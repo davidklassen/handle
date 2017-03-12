@@ -1,6 +1,6 @@
 {
   "name": "node-handle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Handle - build and deploy serverless applications.",
   "bin": {
     "handle": "./dist/handle.js"
