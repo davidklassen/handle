@@ -105,4 +105,4 @@ Visit `https://<account-id>-<app-name>.apps.testterritory.com/hello` to check ho
 
 ## Examples
 
-For more examples visit [examples](examples)
+For more examples visit [examples](https://github.com/davidklassen/handle/blob/master/examples)

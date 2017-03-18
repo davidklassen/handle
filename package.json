@@ -40,5 +40,8 @@
     "node-zip": "^1.1.1",
     "shebang-loader": "0.0.1",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "marked": "^0.3.6"
   }
 }
