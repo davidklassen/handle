@@ -4,10 +4,29 @@ Handle - is a serverless framework and a platform as a service. It allows you to
 
 ## Features
 
-- Easy HTTP routing
-- Object store
-- Document-oriented DB
-- Much more in progress
+### Easy HTTP routing
+
+Just list your routes in the `handle.json` configuration file. Handle will automatically create an API Gateway endpoint for each route and integrate it with a service function. 
+
+### Object store
+
+Handle provides utility functions to store and read files from a cloud object store. It is also possible to subscribe to storage events and execute a service function each time an object is created, changed or removed. 
+
+### Document-oriented DB
+
+You get access to a document-oriented distributed database. Handle will create collections listed in your `handle.json` file and provide an API to write and query these collections.
+
+### PubSub
+
+With Handle you can create publish-subscribe channels and use them both on client side and as a communication channel for your services.
+
+### Cron
+
+You can easily schedule an an execution of your service using cron expressions in `handle.json`.
+
+### Static websites
+
+Handle allows to deploy your static content and creates an endpoint for your static website.
 
 ## Quick start
 
@@ -86,14 +105,4 @@ Visit `https://<account-id>-<app-name>.apps.testterritory.com/hello` to check ho
 
 ## Examples
 
-For more examples visit `examples`
-
-## Documentation
-
-// TODO: ...
-
-## TODO
-
-- PubSub
-- Static website
-- Crontab
+For more examples visit [examples](examples)
