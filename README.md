@@ -1,5 +1,7 @@
 # Handle
 
+![Handle](assets/logo.png)
+
 Handle - is a serverless framework and a platform as a service. It allows you to create and deploy your microservices without having to manage the infrastructure. It provides an easy abstraction layer for a document-oriented DB and an object store. And of course it scales well out of the box.
 
 ## Features
